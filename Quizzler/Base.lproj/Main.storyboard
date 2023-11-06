@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LuI-eZ-8G3">
                                 <rect key="frame" x="20" y="48" width="374" height="814"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-lu-HhP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-lu-HhP">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="614"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,6 +41,9 @@
                                         <state key="normal" title="True" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ciG-gi-o1x"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfg-bS-UGM">
                                         <rect key="frame" x="0.0" y="714" width="374" height="80"/>
@@ -52,6 +55,9 @@
                                         <state key="normal" title="False" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="57F-ff-xSx"/>
+                                        </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Gxc-l0-DaS">
                                         <rect key="frame" x="0.0" y="804" width="374" height="10"/>
@@ -74,6 +80,12 @@
                             <constraint firstItem="LuI-eZ-8G3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jc2-qd-yBb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ProgressBar" destination="Gxc-l0-DaS" id="Rv4-YM-mfl"/>
+                        <outlet property="falseButton" destination="zfg-bS-UGM" id="CW5-cr-ep3"/>
+                        <outlet property="questionLabel" destination="Zj6-lu-HhP" id="MSR-vO-ym7"/>
+                        <outlet property="trueButton" destination="qTV-B4-fJD" id="hXj-ic-iQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
